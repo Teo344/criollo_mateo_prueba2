@@ -23,9 +23,6 @@ class ClimatePage extends StatelessWidget {
 
       body: Column(
         children: [
-          /// ------------------------------------------------------------
-          /// SECCIÓN SUPERIOR DECORADA
-          /// ------------------------------------------------------------
           Container(
             width: double.infinity,
             padding: const EdgeInsets.all(16),
@@ -100,10 +97,6 @@ class ClimatePage extends StatelessWidget {
           ),
 
           const SizedBox(height: 16),
-
-          /// ------------------------------------------------------------
-          /// CONTENIDO PRINCIPAL
-          /// ------------------------------------------------------------
           Expanded(
             child: vm.loading
                 ? const Center(child: CircularProgressIndicator())
@@ -118,9 +111,6 @@ class ClimatePage extends StatelessWidget {
                     : const _WeatherList(),
           ),
 
-          /// ------------------------------------------------------------
-          /// PAGINACIÓN BONITA
-          /// ------------------------------------------------------------
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
             child: Row(
